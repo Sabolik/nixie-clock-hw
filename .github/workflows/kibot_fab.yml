@@ -6,15 +6,8 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "main" ]
-    paths:
-    - '**.sch'
-    - '**.kicad_pcb'
-  pull_request:
-    branches: [ "main" ]
-    paths:
-    - '**.sch'
-    - '**.kicad_pcb'
+    tags:
+      - 'v*'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -54,8 +47,8 @@ jobs:
         name: DRC_Output
         path: generated
 
-  outputs:
-    name: Schematic fabrication files
+  fab:
+    name: generate fabrication files
     runs-on: ubuntu-latest
     container: ghcr.io/inti-cmnb/kicad7_auto_full:1.8.3
     needs: drc
@@ -63,7 +56,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Run schematic stuff
+    - name: Run fabrication generation
       run: kibot -d generated fab assembly doc
 
     - name: Retrieve results
