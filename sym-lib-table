@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "nixie")(type "Legacy")(uri "${KIPRJMOD}/KiCad_Library/KiCad-Tube-master/nixie.lib")(options "")(descr ""))
+)
