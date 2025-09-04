@@ -4,6 +4,13 @@
 
   (paper "A4")
 
+  (title_block
+    (title "ZM108x, Z57x nixieboard")
+    (date "2025-09-04")
+    (rev "3/${GITHASH}")
+    (comment 1 "Atuthor: Martin Sabol")
+  )
+
   (lib_symbols
     (symbol "Device:Lamp_Neon" (pin_names (offset 0.0254) hide) (in_bom yes) (on_board yes)
       (property "Reference" "NE" (at 0.635 3.81 0)
