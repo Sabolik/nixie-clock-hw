@@ -3,18 +3,11 @@ kibot:
 
 preflight:
   check_zone_fills: true
-  run_erc: false
-  run_drc: false
-  erc: true
-  drc: true
-  draw_stackup: false
-  draw_fancy_stackup:
-    draw_stackup: true
-    column_spacing: 1
-    layer_spacing: 2
-    draw_vias: false
-    group_name: kibot_stackup
-  #   # note: ""
+  run_erc: true
+  run_drc:
+    enabled: false
+    ignore_unconnected: true
+
 
   update_pcb_characteristics: true
   set_text_variables:
