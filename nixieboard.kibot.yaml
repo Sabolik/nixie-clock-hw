@@ -234,7 +234,7 @@ outputs:
     comment: 'Generates an archive with all the manufacturing data for PCB assembly'
     type: compress
     options:
-      output: '%f-%i%v-pcb_assembly.%x'
+      output: '%f-pcb_assembly.%x'
       files:
         - from_output: pcb_print
         - from_output: pos
@@ -265,6 +265,7 @@ outputs:
         - layers:
           - layer: User.Drawings
           monochrome: true
+
   - name: 'dimensions_dxf'
     groups: doc
     comment: "Mechanical dimension DXF"
@@ -288,16 +289,25 @@ outputs:
       download: true
       origin: 'grid'
       metric_units: true
-  - name: step_archive
-    groups: doc
-    run_by_default: false
-    comment: 'Compresses the step 3D model'
-    type: compress
-    options:
-      files:
-        - from_output: step
 
 ### 3D renders
+  - name: '3d-render-view'
+    groups: rendering
+    run_by_default: false
+    comment: "PCB 3d model image"
+    type: render_3d
+    dir: .
+    options:
+      view: 'bottom'
+      rotate_x: 5
+      rotate_z: 1
+      orthographic: false
+      transparent_background: true
+      show_silkscreen: false
+      zoom: 9
+      auto_crop: true
+      ray_tracing: true
+
   - name: '3d-render-top'
     groups: rendering
     run_by_default: false
@@ -362,3 +372,23 @@ outputs:
     extends: '3d-render-top'
     options:
       view: 'rear'
+
+
+### Compressed archive of documentation data### Compressed archive of assembly data
+  - name: pcb_doc_archive
+    groups: doc
+    comment: 'Generates an archive with all the documentation data for the project'
+    type: compress
+    options:
+      output: '%f-pcb_doc.%x'
+      files:
+        - from_output: print_sch
+        - from_output: dimensions_pdf
+        - from_output: dimensions_dxf
+        - from_output: step
+        - from_output: 3d-render-top
+        - from_output: 3d-render-bot
+        - from_output: 3d-render-left
+        - from_output: 3d-render-right
+        - from_output: 3d-render-front
+        - from_output: 3d-render-rear
