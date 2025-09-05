@@ -59,7 +59,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Run fabrication generation
-      run: kibot -d generated fab assembly doc
+      run: kibot -d generated 3d-render-view pcb_doc_archive pcb_assembly_archive pcb_fabrication_archive
 
     - name: Release
       uses: softprops/action-gh-release@v2
