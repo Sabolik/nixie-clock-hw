@@ -3,9 +3,11 @@ kibot:
 
 preflight:
   check_zone_fills: true
-  run_erc: true
-  run_drc:
-    enabled: true
+  run_erc: false
+  run_drc: false
+  erc: true
+  drc: 
+    enabled : true
     ignore_unconnected: true
 
 
