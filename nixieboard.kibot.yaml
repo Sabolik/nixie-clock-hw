@@ -3,15 +3,11 @@ kibot:
 
 preflight:
   check_zone_fills: true
-  run_erc: false
-  run_drc: false
-  erc: true
-  drc: 
+  run_erc: true
+  run_drc:
     enabled : true
     ignore_unconnected: true
 
-
-  update_pcb_characteristics: true
   set_text_variables:
     ## Replace git hash inside schematic and pcb prints for revision tracking
     - name: 'GITHASH'

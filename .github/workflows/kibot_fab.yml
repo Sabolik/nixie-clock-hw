@@ -23,7 +23,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Run ERC
-      run: kibot -d generated -s drc -i
+      run: kibot -d generated -s run_drc -i
 
     - name: Retrieve results
       uses: actions/upload-artifact@v4
@@ -40,7 +40,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Run DRC
-      run: kibot -d generated -s erc -i
+      run: kibot -d generated -s run_erc -i
 
     - name: Retrieve results
       uses: actions/upload-artifact@v4
