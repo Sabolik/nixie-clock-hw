@@ -1,5 +1,7 @@
 [![CI](https://github.com/Sabolik/nixie-clock-hw/actions/workflows/kibot_fab.yml/badge.svg?branch=main)](https://github.com/Sabolik/nixie-clock-hw/actions/workflows/kibot_fab.yml)
 
+![PCB render](https://github.com/Sabolik/nixie-clock-hw/releases/download/v2/nixieboard-3D_bottom.png?raw=true)
+
 # HW
 
 
@@ -92,4 +94,5 @@ For open source projects, say how it is licensed.
 
 ## Project status
 If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+
 
