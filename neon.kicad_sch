@@ -406,7 +406,7 @@
     (property "Supplier" "TME" (at 142.24 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "SPN" "RC0201FR-073K3L" (at 142.24 109.22 0)
+    (property "SPN" "0603SAF3301T5E" (at 142.24 109.22 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 54dd875f-2d08-49b5-a188-de9676be3d06))
