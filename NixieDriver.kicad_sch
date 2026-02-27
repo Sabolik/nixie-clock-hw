@@ -6,8 +6,8 @@
 
   (title_block
     (title "ZM108x, Z57x nixieboard")
-    (date "2025-09-04")
-    (rev "3/${GITHASH}")
+    (date "2026-02-27")
+    (rev "2.1/${GITHASH}")
     (comment 1 "Atuthor: Martin Sabol")
   )
 
